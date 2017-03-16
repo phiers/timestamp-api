@@ -20,14 +20,14 @@ function parseDate(input) {
         result.unix = unix/1000;
         result.natural = input;
       } else {
-        return 'Enter a date or UNIX timestamp after the "/" to get a response';
+        return 'INVALID ENTRY! \n\nEnter a date or UNIX timestamp after a "/" in the address bar to get a response';
       }
     }
     return JSON.stringify(result);
 }
 
 app.get('/', (req, res) => {
-    res.send('Enter a date or UNIX timestamp after the "/" to get a response');
+    res.send('Enter a date or UNIX timestamp after a "/" in the address bar to get a response');
 });
 
 app.get('/:date', (req, res) => {
